@@ -1,0 +1,56 @@
+html, html>body {
+  display: flex;
+  display: -webkit-flex;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+html>body>nav {
+  display: block;
+  flex: 0.05 0 50px;
+  -webkit-flex: 0.05 0 auto;
+  width: 150px;
+  background: #E0E0E0;
+  padding: 10px;
+  overflow-y: auto;
+}
+html>body>nav>ul {
+}
+html>body>nav>ul>li {
+  list-style: none;
+  padding: 3px;
+  margin: 5px;
+  background: #6AD9EC;
+}
+
+.feedback{
+  display: flex;
+  display: -webkit-flex;
+  flex: 3 3 auto;
+  -webkit-flex: 1 0 auto;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.workspace {
+  flex: 3 3 auto;
+  -webkit-flex: 2 0 auto;
+}
+.code {
+  flex: 2 3 auto;
+ -webkit-flex: 1 0 auto;
+  background: black;
+  color: white;
+}
+
+.x-selected-element {
+  border: 3px solid gold;
+}
+.x-hovered-over {
+  border: 3px solid red;
+}
+.code {
+  padding: 15px;
+  font-family: monospace;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "speak-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify client.js -o public/bundle.js",
+    "watch": "watchify client.js -o public/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ecstatic": "^0.8.0",
+    "highlight": "^0.2.3",
+    "htmltidy": "0.0.6"
+  }
+}

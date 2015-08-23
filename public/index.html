@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Created Initially using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by Dan Finlay (http://danfinlay.com)
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+
+<html>
+<head>
+  <script src="/public/annyang.js"></script>
+<!--  <script src="/public/prism.js"></script> 
+  <link rel="stylesheet" href="/public/prism.css">
+-->
+
+  <meta charset="utf-8">
+  <title>Speakeasy</title>
+
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+  <nav>
+    <h2>Speakeasy CSS</h2>
+    <ul>
+      <li draggable=true>div</li>
+      <li draggable=true>span</li>
+      <li draggable=true>h1</li>
+      <li draggable=true>h2</li>
+      <li draggable=true>h3</li>
+      <li draggable=true>h4</li>
+      <li draggable=true>p</li>
+      <li draggable=true>nav</li>
+      <li draggable=true>ol</li>
+      <li draggable=true>ul</li>
+      <li draggable=true>li</li>
+      <li draggable=true>section</li>
+      <li draggable=true>img</li>
+      <li draggable=true>button</li>
+      <li draggable=true>input</li>
+    </ul>
+    <p>Drag out an element, or click on one you've dragged out, then style it by saying things.</p>
+    <p>Try "style color red" or "style height 100 pixels"</p>
+    <p>Set text values with "Set text: whatever you want"</p>
+    <button onclick="initAnnyang();">Start Listening</button>
+  </nav>
+  <section class="feedback">
+    <section class="workspace" ondragover="event.preventDefault();">
+    </section>
+    <section class="code">
+      <pre><code class="language-markup"></code></pre>
+    </section>
+  </section>
+<script src="/public/bundle.js"></script>
+</body>
+</html>
