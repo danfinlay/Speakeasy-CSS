@@ -118,7 +118,7 @@ function initAnnyang(){
 	    'style *term': function(term) {
                var parsed;
                // Sometimes already is CSS:
-               if (term.match(/.\:[0-9]+[px|\%]/)){
+               if (term.match(/.\:./)){
                  var parts = term.split(':');
                  parsed = {
                    key: parts[0], value: parts[1],
