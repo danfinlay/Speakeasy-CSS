@@ -14,18 +14,18 @@ var workspace = document.querySelector('.workspace');
 newDragTarget(workspace);
 
 var elements = document.querySelectorAll('html>body>nav>ul>li');
-console.log(elements);
 [].forEach.call(elements, function(el) {
   el.addEventListener('dragstart', handleDragStart, false);
   el.addEventListener('drop', dropped);
 });
 
-/*
-var nondraggables = document.querySelectorAll('html>body>nav, html>body>.feedback>.code');
-[].forEach.call(nondraggables, function(el){
-  el.addEventListener('dragleave', removeHover);
+var nondraggables = document.querySelectorAll('html>body>nav, .feedback');
+for(var i = 0; i < nondraggables.length; i++){
+  nondraggables[i].addEventListener('dragenter', function(ev){
+    if (ev.target === dragTarget) return;
+    removeHover();
 });
-*/
+}
 
 function handleDragStart(ev) {
   ev.dataTransfer.effectAllowed = "copy";
@@ -51,12 +51,10 @@ function unregisterListenersFor(el) {
 
 function dragEntered(ev) {
   dragTarget = ev.target;
-  console.log("Dragged  entered "+ev.target);
   hoverOver(dragTarget);
 }
 
 function dragLeft(ev){
-  console.log("Dragged  left "+ev.target);
   removeHover();
 }
 
@@ -79,6 +77,7 @@ function updateCodePreview(){
 }
 
 function removeHover(){
+  if (!dragTarget) return;
   dragTarget = null;
   var oldHovered = document.querySelectorAll(".x-hovered-over");
   for (var i = 0; i < oldHovered.length; i++) { 
@@ -165,7 +164,6 @@ var commonMistakes = {
 };
 
 function parseCSSTerm (term) {
-  console.log("PARSING "+term);
   var words = cleanse(term.split(' '));
   var key = '', value;
   
