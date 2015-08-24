@@ -2,6 +2,8 @@
 
 A simple web tool for exploring the world of editing web sites with your voice and hands, not so much with the code necessarily.
 
+[Live Demo](http://flyswatter.github.io/Speakeasy-CSS/public/)
+
 ## Usage
 
 Allow the browser to access your microphone.
